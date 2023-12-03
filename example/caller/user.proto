@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package fixbug;
+package fixbug;//注意命名空间
 
 option cc_generic_services = true;
 
