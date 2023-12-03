@@ -9,9 +9,9 @@
 class RpcProvide{
 public:
     //框架提供给外部使用的接口，提供基类
-    void NotifyService(google::protobuf::Service *service){};
+    void NotifyService(google::protobuf::Service *service);
     //启动rpc服务节点，开始提供rpc远程网络调用服务
-    void Run(){};
+    void Run();
 };
 
 
