@@ -1,10 +1,13 @@
 /*
  * @Date: 2023-12-03 22:31:38
- * @LastEditTime: 2023-12-03 22:41:51
+ * @LastEditTime: 2023-12-05 23:47:40
  * @FilePath: \my_rpc\src\include\rpcprovider.h
  */
 #ifndef RPCPROVIDE_H
 #define RPCPROVIDE_H
+#include"google/protobuf/service.h"
+#include<memory>
+#include<muduo/net/TcpServer.h>
 //负责rpc框架的网络服务
 class RpcProvide{
 public:

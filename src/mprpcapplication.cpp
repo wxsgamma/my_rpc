@@ -1,12 +1,13 @@
 /*
  * @Author: your name
  * @Date: 2023-12-04 00:16:48
- * @LastEditTime: 2023-12-05 08:47:35
+ * @LastEditTime: 2023-12-05 22:52:56
  * @LastEditors: nuc-virtual-machine
  * @Description: In User Settings Edit
  * @FilePath: /my_rpc/src/mprpcapplication.cpp
  */
 #include"include/mprpcapplication.h"
+#include"include/mprpcconfig.h"
 #include<cstdio>
 #include<unistd.h>
 void ShowArgsHelp(){
@@ -25,17 +26,17 @@ void MprpcApplication::init(int argc,char **argv){
         case 'i':
             config_file=optarg;break;
         case '?':
-            std::cout<<"invaild args!"<<std::endl;
             ShowArgsHelp();
             exit(EXIT_FAILURE);
         case ':': 
-            std::cout<<"need<configfile>"<<std::endl;
             ShowArgsHelp();
             exit(EXIT_FAILURE);
         default:
             break;                
     }
    }
+   m_config.LoadConfigFile(config_file.c_str());
+   
 };
 
 MprpcApplication& MprpcApplication::GetInstance(){
