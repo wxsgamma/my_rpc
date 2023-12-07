@@ -1,6 +1,6 @@
 /*
  * @Date: 2023-12-03 22:31:19
- * @LastEditTime: 2023-12-05 22:51:24
+ * @LastEditTime: 2023-12-07 11:22:16
  * @FilePath: \my_rpc\src\include\mprpcapplication.h
  */
 #ifndef MPRPCAPPLICATION_H
@@ -18,7 +18,6 @@ private:
     MprpcApplication(const MprpcApplication&)=delete;
     MprpcApplication(MprpcApplication&&)=delete;
 };
-
 
 
 
